@@ -18,13 +18,13 @@ public class EnemyController : MonoBehaviour
     
     
     // serialized fields
-    [SerializeField]
     private Camera camera;
     [SerializeField]
     private GameObject arrow;
     
     // private fields
-    private int arrowDirection;
+    private int arrowHorizontalDirection;
+    private int arrowVerticalDirection;
     private Vector3 arrowOriginalScale;
     
     // components
@@ -38,6 +38,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         // initializes some fields
+        camera = Camera.main;
         battleCollider = GetComponentInChildren<CircleCollider2D>();
         battleCollider.radius = battleAreaRadius;
         animator = GetComponent<Animator>();
@@ -51,18 +52,35 @@ public class EnemyController : MonoBehaviour
     {
         
     }
+
+
+
+    void KillEnemy()
+    {
+        Destroy(gameObject);
+    }
+    
+    
     
     // flips arrows horizontally depending on the button that needs to be pressed
-    private void FlipArrowHorizontally(KeyCode input)
+    private void FlipArrow(KeyCode input)
     {
-        arrowDirection = 1;
+        arrowHorizontalDirection = 1;
+        arrowVerticalDirection = 1;
+        
         if (input == KeyCode.RightArrow)
         {
-            arrowDirection = -1;
+            arrowHorizontalDirection = -1;
         }
+        
+        if (input == KeyCode.DownArrow)
+        {
+            arrowVerticalDirection = -1;
+        }
+        
         arrow.transform.localScale = new Vector3(
-            arrowDirection * arrowOriginalScale.x,
-            arrowOriginalScale.y,
+            arrowHorizontalDirection * arrowOriginalScale.x,
+            arrowVerticalDirection * arrowOriginalScale.y,
             arrowOriginalScale.z);
     }
 
@@ -98,23 +116,21 @@ public class EnemyController : MonoBehaviour
 
             while (!Input.GetKeyDown(inputs[i]))
             {
-                FlipArrowHorizontally(inputs[i]);
+                FlipArrow(inputs[i]);
                 yield return null;
             }
         }
 
         arrow.transform.localScale = new Vector3(0, 0, 0);
         other.GetComponent<CharacterMovementController>().speed = 0;
-        animator.SetTrigger("Dead");
-        Collider.enabled = false;
+        GetComponent<CharacterMovementController>().speed = 0;
+        animator.SetTrigger("Dead"); 
         
         yield return new WaitForSeconds(1f);
         
         Time.timeScale = 1f;
         other.GetComponent<CharacterMovementController>().speed = 10;
         camera.orthographicSize = 13;
-
-
     }
     
 }

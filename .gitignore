@@ -1,4 +1,40 @@
-/Library/
-/Temp/
-/Obj/
-/Logs/
+# --- Unity Folders to Ignore ---
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+/[Mm]emoryCaptures/
+
+# --- Asset Store Packages ---
+/[Aa]ssets/AssetStoreTools*
+
+# --- IDE (Visual Studio / Rider) generated files ---
+.vs/
+.idea/
+*.csproj
+*.sln
+*.unityproj
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.com.apple.itunes.plist
+
+# --- OS generated files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# --- Crashes/Logs ---
+sysinfo.txt
+*.stackdump

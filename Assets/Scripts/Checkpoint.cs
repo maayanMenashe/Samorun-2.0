@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject fire;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,5 +16,13 @@ public class Checkpoint : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (CompareTag("Player"))
+        {
+            fire.transform.localScale *= 5;
+        }
     }
 }

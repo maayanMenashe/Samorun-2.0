@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 respawnPoint;
     private Camera Camera;
     private float originalCameraSize;
+    private float originalSpeed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        originalSpeed = GetComponent<CharacterMovementController>().speed;
         startingPosition = transform.position;
         respawnPoint = startingPosition;
         Camera = Camera.main;
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = respawnPoint;
             Camera.orthographicSize = originalCameraSize;
-            GetComponent<CharacterMovementController>().speed = 10;
+            GetComponent<CharacterMovementController>().speed = originalSpeed;
             Time.timeScale = 1f;
 
             GameObject[] allGameObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);

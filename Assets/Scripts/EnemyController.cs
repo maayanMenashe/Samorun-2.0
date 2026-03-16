@@ -131,7 +131,7 @@ public class EnemyController : MonoBehaviour
         GetComponent<CharacterMovementController>().speed = 0;
         animator.SetTrigger("Dead"); 
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.16f);
         
         Time.timeScale = 1f;
         other.GetComponent<CharacterMovementController>().speed = 10;

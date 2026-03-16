@@ -955,63 +955,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 493062382914725373, guid: d9a38e5850c05514280cf8e7f5ef0059, type: 3}
   m_PrefabInstance: {fileID: 1535194787}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1731877278
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25.6902
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.80776
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681734753004678617, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7785688287553991747, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-      propertyPath: m_Name
-      value: IranAgent
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
 --- !u!1 &1796714803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,4 +1762,3 @@ SceneRoots:
   - {fileID: 2007701347}
   - {fileID: 1796714804}
   - {fileID: 1811383166}
-  - {fileID: 1731877278}

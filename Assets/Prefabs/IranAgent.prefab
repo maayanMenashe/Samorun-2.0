@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2738721494960806318}
   - component: {fileID: 2544199909526110379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KillRange
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3083887815101840972}
   - component: {fileID: 2051245569403509246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3702762471060412995}
   - component: {fileID: 1452377045155335878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 96548867978911805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 2569038891021719892}
   - component: {fileID: 1511460191467640421}
   - component: {fileID: 2870010852891097085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IranAgent
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -3096921410609264887, guid: 2dd6d6fedc5509446884c64e608b46c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0867840a29899ac46bbbfb1bbeed1bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
+  speed: 8
   isEnemy: 1
 --- !u!114 &1511460191467640421
 MonoBehaviour:
@@ -477,6 +477,7 @@ MonoBehaviour:
   shrinkedCameraSize: 5
   battleAreaRadius: 8
   arrow: {fileID: 7312684711280777454}
+  audioManager: {fileID: 5286288361660515439, guid: 43495bd0ac09674458587a673bdb9996, type: 3}
 --- !u!95 &2870010852891097085
 Animator:
   serializedVersion: 7
@@ -509,7 +510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6573006491900096273}
   - component: {fileID: 6374906422759460010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CombatArea
   m_TagString: CombatArea
   m_Icon: {fileID: 0}
@@ -577,7 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5667054145864001467}
   - component: {fileID: 5765402932383950621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

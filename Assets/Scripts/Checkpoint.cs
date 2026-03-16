@@ -5,6 +5,8 @@ public class Checkpoint : MonoBehaviour
 {
     [SerializeField]
     private GameObject fire;
+
+    private bool firstTime;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,9 +22,13 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            fire.transform.localScale *= 5;
+            if (!firstTime)
+            {
+                fire.transform.localScale *= 5;
+                firstTime = true;
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 662096241482833709}
   - component: {fileID: 5767137313209409332}
   - component: {fileID: 2661521451119944175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enemyPrefab: {fileID: 7785688287553991747, guid: 6af68de63607d8b44be44548a0e1bf21, type: 3}
-  camera: {fileID: 3498231491944480778, guid: ba6b5127b3bfb7d4d92e070f0f804b65, type: 3}
 --- !u!58 &2661521451119944175
 CircleCollider2D:
   m_ObjectHideFlags: 0

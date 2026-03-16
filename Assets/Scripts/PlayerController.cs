@@ -5,6 +5,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private AudioManager audioManager;
+    
     private Vector3 startingPosition;
     private Vector3 respawnPoint;
     private Camera Camera;
@@ -36,6 +38,8 @@ public class PlayerController : MonoBehaviour
             Camera.orthographicSize = originalCameraSize;
             GetComponent<CharacterMovementController>().speed = originalSpeed;
             Time.timeScale = 1f;
+            audioManager.PlayPlayerDeathSFX();
+            
 
             GameObject[] allGameObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
             foreach (var gameObject in allGameObjects)
@@ -46,6 +50,11 @@ public class PlayerController : MonoBehaviour
                 }
                 
             }
+        }
+
+        if (other.CompareTag("Checkpoint"))
+        {
+            respawnPoint = other.transform.position;
         }
     }
 }

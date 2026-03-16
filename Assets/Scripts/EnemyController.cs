@@ -21,11 +21,15 @@ public class EnemyController : MonoBehaviour
     private Camera camera;
     [SerializeField]
     private GameObject arrow;
+
+
     
     // private fields
     private int arrowHorizontalDirection;
     private int arrowVerticalDirection;
     private Vector3 arrowOriginalScale;
+    private float originalCameraSize;
+
     
     // components
     private Animator animator;
@@ -39,12 +43,13 @@ public class EnemyController : MonoBehaviour
     {
         // initializes some fields
         camera = Camera.main;
+        originalCameraSize = camera.orthographicSize;
         battleCollider = GetComponentInChildren<CircleCollider2D>();
         battleCollider.radius = battleAreaRadius;
         animator = GetComponent<Animator>();
         Collider = GetComponent<Collider2D>();
         animator.SetInteger("AnimationNum", -1);
-        arrowOriginalScale = arrow.transform.localScale;
+        arrowOriginalScale = arrow.transform.localScale; 
     }
 
     // Update is called once per frame
@@ -130,7 +135,7 @@ public class EnemyController : MonoBehaviour
         
         Time.timeScale = 1f;
         other.GetComponent<CharacterMovementController>().speed = 10;
-        camera.orthographicSize = 13;
+        camera.orthographicSize = originalCameraSize;
     }
     
 }

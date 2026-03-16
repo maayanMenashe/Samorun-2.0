@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnRange
   - CombatArea
+  - Enemy
   layers:
   - Default
   - TransparentFX

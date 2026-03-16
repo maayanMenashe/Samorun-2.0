@@ -473,11 +473,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135c0efb84178f6489cdb4100ea560aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  slowedTime: 0.1
-  shrinkedCameraSize: 5
-  battleAreaRadius: 8
+  slowedTime: 0.4
+  shrinkedCameraSize: 9
+  battleAreaRadius: 7
   arrow: {fileID: 7312684711280777454}
-  audioManager: {fileID: 5286288361660515439, guid: 43495bd0ac09674458587a673bdb9996, type: 3}
 --- !u!95 &2870010852891097085
 Animator:
   serializedVersion: 7

@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         pausable = true;
     }
 
-    void Victory()
+    public void Victory()
     {
         Time.timeScale = 0f;
         audioManager.backgroundMusic.volume = 0.1f;

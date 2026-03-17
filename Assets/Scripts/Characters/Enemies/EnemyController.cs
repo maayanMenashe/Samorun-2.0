@@ -43,6 +43,7 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     private Camera camera;
     private AudioManager audioManager;
+    private GameManager gameManager;
     
     private System.Random randomNum = new System.Random();
 
@@ -57,6 +58,7 @@ public class EnemyController : MonoBehaviour
         arrowOriginalScale = verticalArrow.transform.localScale;// saves arrow's scale
         audioManager = FindAnyObjectByType<AudioManager>();// gets audiomanager
         originalTimeScale = Time.timeScale;
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -122,6 +124,7 @@ public class EnemyController : MonoBehaviour
 
     void Win()
     {
+        gameManager.Victory();
     }
     
     // makes arrow appear correctly

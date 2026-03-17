@@ -13,6 +13,13 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    void OpenPauseMenu()
+    {
+        
+    }
+    
+    
     
 }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Timeline;
 
 public class AudioManager : MonoBehaviour
@@ -8,9 +9,8 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private AudioClip music;
 
-    [SerializeField] private AudioClip slash1;
-    [SerializeField] private AudioClip slash2;
-    [SerializeField] private AudioClip slash3;
+    [SerializeField] private AudioClip slash;
+    [SerializeField] private AudioClip fastSlash;
     [SerializeField] private AudioClip enemyDeath1;
     [SerializeField] private AudioClip enemyDeath2;
     [SerializeField] private AudioClip playerDeath;
@@ -32,7 +32,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySlashSFX()
     {
-        SFX.PlayOneShot(slash1);
+        SFX.PlayOneShot(slash);
+    }
+    
+    public void PlayFastSlashSFX()
+    {
+        SFX.PlayOneShot(fastSlash);
     }
     
     public void PlayKillEnemySFX()

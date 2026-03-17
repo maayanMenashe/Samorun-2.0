@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
     private int arrowVerticalDirection;
     private Vector3 arrowOriginalScale;
     private float originalCameraSize;
+    private AudioManager audioManager;
 
     
     // components
@@ -49,7 +50,8 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         Collider = GetComponent<Collider2D>();
         animator.SetInteger("AnimationNum", -1);
-        arrowOriginalScale = arrow.transform.localScale; 
+        arrowOriginalScale = arrow.transform.localScale;
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -57,6 +59,25 @@ public class EnemyController : MonoBehaviour
     {
         
     }
+
+
+    void PlaySlashSFX()
+    {
+        audioManager.PlaySlashSFX();
+    }
+    
+    void PlayFastSlashSFX()
+    {
+        audioManager.PlayFastSlashSFX();
+    }
+    
+    void PlayKillSFX()
+    {
+        audioManager.PlayKillEnemySFX();
+    }
+    
+
+    
 
 
 

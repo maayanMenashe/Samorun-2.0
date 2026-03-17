@@ -32,15 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("EnemyKillRange"))
         {
-            transform.position = respawnPoint;
-            Camera.orthographicSize = originalCameraSize;
-            GetComponent<CharacterMovementController>().speed = originalSpeed;
-            Time.timeScale = 1f;
-            audioManager.PlayPlayerDeathSFX();
-            
-
             GameObject[] allGameObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
             foreach (var gameObject in allGameObjects)
             {
@@ -50,6 +43,15 @@ public class PlayerController : MonoBehaviour
                 }
                 
             }
+            
+            Camera.orthographicSize = originalCameraSize;
+            GetComponent<CharacterMovementController>().speed = originalSpeed;
+            Time.timeScale = 1f;
+            audioManager.PlayPlayerDeathSFX();
+            transform.position = respawnPoint;
+            
+
+
         }
 
         if (other.CompareTag("Checkpoint"))

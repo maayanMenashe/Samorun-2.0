@@ -8,6 +8,8 @@ TagManager:
   - CombatArea
   - Enemy
   - Checkpoint
+  - EnemyKillRange
+  - PlayerHitbox
   layers:
   - Default
   - TransparentFX

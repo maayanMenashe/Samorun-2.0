@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
 {
     // for testing
     public float slowedTime = 0.1f;
-    public float shrinkedCameraSize = 5f;
+    public float shrinkedCameraSize = 6f;
     public float battleAreaRadius = 5f;
     
     
@@ -116,8 +116,8 @@ public class EnemyController : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            animator.SetInteger("AnimationNum", i-1);
-            camera.orthographicSize = shrinkedCameraSize + 2 - i;
+            animator.SetInteger("AnimationNum", i);
+            camera.orthographicSize = shrinkedCameraSize - i;
 
             while (!Input.GetKeyDown(inputs[i]))
             {

@@ -4,8 +4,8 @@ using UnityEngine.Timeline;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource backgroundMusic;
-    [SerializeField] private AudioSource SFX;
+    public AudioSource backgroundMusic;
+    public AudioSource SFX;
 
     [SerializeField] private AudioClip music;
 

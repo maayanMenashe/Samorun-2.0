@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour
     private float shrinkedCameraSize = 6f;
     [SerializeField]
     private float combatTimeScale = 0.1f;
+    [SerializeField]
+    private bool boss;
     
     
     // private fields
@@ -82,28 +84,46 @@ public class EnemyController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-    /*
-    KeyCode[] RandomButtonSequence(int numOfHits)
+    
+    KeyCode[] RandomButtonSequence()
     {
+        int numOfHits;
+        if (boss)
+        {
+            numOfHits = numOfHitsBoss;
+        }
+        else
+        {
+            numOfHits = numOfHitsEnemy;
+        }
+        
         KeyCode[] newArray = new KeyCode[numOfHits];
         
         for (int i = 0; i < numOfHits; i++)
         {
-            int num = randomNum.Next(1,5);
+            int num = randomNum.Next(1,numOfPossibleInputs + 1);
 
-        }
-
-        switch (num)
-        {
-            case 1:
-                break;
+            switch (num)
+            {
+                case 1:
+                    newArray[i] = KeyCode.LeftArrow;
+                    break;
             
-            case 2:
-                break;
+                case 2:
+                    newArray[i] = KeyCode.RightArrow;
+                    break;     
+                
+                case 3:
+                    newArray[i] = KeyCode.UpArrow;
+                    break;             
+                
+                case 4:
+                    newArray[i] = KeyCode.DownArrow;
+                    break;
+            }
         }
+        return newArray;
     }
-    */
     
     // makes arrow appear correctly
     private void FlipArrow(KeyCode input)
@@ -162,12 +182,13 @@ public class EnemyController : MonoBehaviour
         camera.orthographicSize = shrinkedCameraSize;// zooms
         Time.timeScale = combatTimeScale;// slows time
         
+        
         // this is an input array example, that will be replaced by a function that creates a random one
-        KeyCode[] inputs = new KeyCode[4];
-        inputs[0] = KeyCode.LeftArrow;
-        inputs[1] = KeyCode.RightArrow;
-        inputs[2] = KeyCode.LeftArrow;
-        inputs[3] = KeyCode.RightArrow;
+        KeyCode[] inputs = RandomButtonSequence();
+        //inputs[0] = KeyCode.LeftArrow;
+        //inputs[1] = KeyCode.RightArrow;
+        //inputs[2] = KeyCode.LeftArrow;
+        //inputs[3] = KeyCode.RightArrow;
 
         // loops one time for each input in the array
         for (int i = 0; i < inputs.Length; i++)
@@ -182,6 +203,7 @@ public class EnemyController : MonoBehaviour
                 yield return null;
             }
             Instantiate(SlashPrefab, transform.position, Quaternion.identity);
+            //yield return null;
         }
         
         // stops both characters and plays dead anim

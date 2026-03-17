@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     
     // private fields
     private int arrowHorizontalDirection;
-    private int arrowVerticalDirection;
+    private int arrowDirection;
     private Vector3 arrowOriginalScale;
     private float originalCameraSize;
     private float deathAnimDuration = 1 / 6f;
@@ -96,31 +96,28 @@ public class EnemyController : MonoBehaviour
             horizontalArrow.SetActive(false);
         }
         
-        arrowHorizontalDirection = 1;
-        arrowVerticalDirection = 1;
+        //arrowHorizontalDirection = 1;
+        arrowDirection = 1;
         
         // flips it if right
         if (input == KeyCode.RightArrow)
         {
-            arrowHorizontalDirection = -1;
+            arrowDirection = -1;
         }
         
         // flips it if down
         if (input == KeyCode.DownArrow)
         {
-            arrowVerticalDirection = -1;
+            arrowDirection = -1;
         }
         
         //flips both
         verticalArrow.transform.localScale = new Vector3(
-            arrowHorizontalDirection * arrowOriginalScale.x,
-            arrowVerticalDirection * arrowOriginalScale.y,
+            arrowOriginalScale.x,
+            arrowDirection * arrowOriginalScale.y,
             arrowOriginalScale.z);
 
-        horizontalArrow.transform.localScale = new Vector3(
-            arrowHorizontalDirection * arrowOriginalScale.x,
-            arrowVerticalDirection * arrowOriginalScale.y,
-            arrowOriginalScale.z);;
+        horizontalArrow.transform.localScale = verticalArrow.transform.localScale;
     }
 
     

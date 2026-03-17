@@ -1,5 +1,8 @@
+using System.Collections;
+using System.Net.Mime;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,11 +12,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject mainMenu;
     
+    [SerializeField]
+    private GameObject exposition;
+
+    [SerializeField]
+    private GameObject tutorial;
+    
     private AudioManager audioManager;
 
     private bool isPaused;
     
-    private bool gameStarted;
+    private bool pausable;
 
     private float currentTimeScale = 1f;
     
@@ -31,7 +40,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Pause") && gameStarted)
+        if (Input.GetButtonDown("Pause") && pausable)
         {
             OpenOrClosePauseMenu();
         }
@@ -56,17 +65,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-
-    public void StartGame()
-    {
-        gameStarted = true;
-        mainMenu.SetActive(false);
-        Time.timeScale = currentTimeScale;
-        audioManager.backgroundMusic.volume = 0.3f;
-    }
-    
-    
-    
     public void QuitGame()
     {
         #if UNITY_EDITOR
@@ -74,7 +72,50 @@ public class GameManager : MonoBehaviour
         #endif
         Application.Quit();
     }
+
     
+    
+    public void StartGame()
+    {
+        pausable = true;
+        mainMenu.SetActive(false);
+        Time.timeScale = currentTimeScale;
+        audioManager.backgroundMusic.volume = 0.3f;
+        StartCoroutine(PlayTwoPopups(exposition, tutorial));
+    }
+    
+    
+
+
+
+
+    IEnumerator PlayTwoPopups(GameObject popup1, GameObject popup2)
+    {
+        pausable = false;
+        currentTimeScale = Time.timeScale;
+        Time.timeScale = 0f;
+        audioManager.backgroundMusic.volume = 0.1f;
+        popup1.SetActive(true);
+        
+        while (!Input.anyKeyDown)
+        {
+            yield return null;
+        }
+        
+        popup1.SetActive(false);
+        yield return new WaitForEndOfFrame();
+        popup2.SetActive(true);
+
+        while (!Input.anyKeyDown)
+        {
+            yield return null;
+        }
+        
+        popup2.SetActive(false);
+        Time.timeScale = currentTimeScale;
+        audioManager.backgroundMusic.volume = 0.3f;
+        pausable = true;
+    }
     
     
 }

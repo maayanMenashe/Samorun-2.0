@@ -27,12 +27,18 @@ public class EnemyController : MonoBehaviour
     private float deathAnimDuration = 1 / 6f;
     private float originalTimeScale;
     private float playerOriginalSpeed;
+    private int numOfHitsEnemy = 4;
+    private int numOfHitsBoss = 7;
+    private int numOfPossibleInputs = 4;
+    
     
     
     // components
     private Animator animator;
     private Camera camera;
     private AudioManager audioManager;
+    
+    private System.Random randomNum = new System.Random();
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -76,8 +82,28 @@ public class EnemyController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    
-    
+
+    /*
+    KeyCode[] RandomButtonSequence(int numOfHits)
+    {
+        KeyCode[] newArray = new KeyCode[numOfHits];
+        
+        for (int i = 0; i < numOfHits; i++)
+        {
+            int num = randomNum.Next(1,5);
+
+        }
+
+        switch (num)
+        {
+            case 1:
+                break;
+            
+            case 2:
+                break;
+        }
+    }
+    */
     
     // makes arrow appear correctly
     private void FlipArrow(KeyCode input)

@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 72ba806b63b48844aa545330d0153445
+guid: 0f60fa260022e334786d4fd91fe79202
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1270329607349074546
-    second: key-Sheet_0
+      213: -34716054882100196
+    second: LeftSlash_0
   - first:
-      213: -1305028796016803052
-    second: key-Sheet_1
+      213: -6492338449993848181
+    second: LeftSlash_1
   - first:
-      213: -3161604528879095563
-    second: key-Sheet_2
+      213: 7872574471407697519
+    second: LeftSlash_2
   - first:
-      213: -840960177563446369
-    second: key-Sheet_3
+      213: -2084849016096841622
+    second: LeftSlash_3
+  - first:
+      213: -6103585710205099166
+    second: LeftSlash_4
+  - first:
+      213: -7994000149039461015
+    second: LeftSlash_5
+  - first:
+      213: 3204808393418279342
+    second: LeftSlash_6
+  - first:
+      213: -8184629499797382465
+    second: LeftSlash_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: key-Sheet_0
+      name: LeftSlash_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 6
-        width: 41
-        height: 41
+        x: 6
+        y: 67
+        width: 26
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27af3b12c0e11a110800000000000000
-      internalID: 1270329607349074546
+      spriteID: c1cdfb89ee9a48ff0800000000000000
+      internalID: -34716054882100196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: key-Sheet_1
+      name: LeftSlash_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 6
-        width: 41
-        height: 41
+        x: 72
+        y: 65
+        width: 40
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41343cf693b93ede0800000000000000
-      internalID: -1305028796016803052
+      spriteID: b8aa18ed39496e5a0800000000000000
+      internalID: -6492338449993848181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: key-Sheet_2
+      name: LeftSlash_2
       rect:
         serializedVersion: 2
-        x: 139
-        y: 6
-        width: 41
-        height: 41
+        x: 137
+        y: 65
+        width: 48
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f035ef8e69bf14d0800000000000000
-      internalID: -3161604528879095563
+      spriteID: f6e701465c0014d60800000000000000
+      internalID: 7872574471407697519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: key-Sheet_3
+      name: LeftSlash_3
       rect:
         serializedVersion: 2
-        x: 203
-        y: 6
-        width: 41
-        height: 41
+        x: 206
+        y: 65
+        width: 47
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +202,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f93d4129c2f4454f0800000000000000
-      internalID: -840960177563446369
+      spriteID: a60a939add02113e0800000000000000
+      internalID: -2084849016096841622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftSlash_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 81
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263231f7225bb4ba0800000000000000
+      internalID: -6103585710205099166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftSlash_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 33
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d451ee73b9f0190800000000000000
+      internalID: -7994000149039461015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftSlash_6
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 24
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea903e60144c97c20800000000000000
+      internalID: 3204808393418279342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftSlash_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 39
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbad46e75da5a6e80800000000000000
+      internalID: -8184629499797382465
       vertices: []
       indices: 
       edges: []
@@ -210,10 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      key-Sheet_0: 1270329607349074546
-      key-Sheet_1: -1305028796016803052
-      key-Sheet_2: -3161604528879095563
-      key-Sheet_3: -840960177563446369
+      LeftSlash_0: -34716054882100196
+      LeftSlash_1: -6492338449993848181
+      LeftSlash_2: 7872574471407697519
+      LeftSlash_3: -2084849016096841622
+      LeftSlash_4: -6103585710205099166
+      LeftSlash_5: -7994000149039461015
+      LeftSlash_6: 3204808393418279342
+      LeftSlash_7: -8184629499797382465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

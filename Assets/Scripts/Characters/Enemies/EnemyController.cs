@@ -12,13 +12,19 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject verticalArrow;
     [SerializeField]
-    private GameObject SlashPrefab;
-    [SerializeField]
     private float shrinkedCameraSize = 6f;
     [SerializeField]
     private float combatTimeScale = 0.1f;
     [SerializeField]
     private int numOfHits = 4;
+    [SerializeField]
+    private GameObject upSlashPrefab;
+    [SerializeField]
+    private GameObject downSlashPrefab;
+    [SerializeField]
+    private GameObject rightSlashPrefab;
+    [SerializeField]
+    private GameObject leftSlashPrefab;
 
     
     // private fields
@@ -154,6 +160,30 @@ public class EnemyController : MonoBehaviour
         horizontalArrow.transform.localScale = verticalArrow.transform.localScale;
     }
 
+    GameObject FindSlashPrefab(KeyCode input)
+    {
+        GameObject correctPrefab;
+        switch (input)
+        {
+            case KeyCode.LeftArrow:
+                correctPrefab = leftSlashPrefab;
+                break;
+            
+            case KeyCode.RightArrow:
+                correctPrefab = rightSlashPrefab;
+                break;
+            
+            case KeyCode.UpArrow:
+                correctPrefab = upSlashPrefab;
+                break;
+            
+            default:
+                correctPrefab = downSlashPrefab;
+                break;    
+        }
+        return correctPrefab;
+    }
+
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -186,7 +216,7 @@ public class EnemyController : MonoBehaviour
                 FlipArrow(inputs[i]);// positions the arrow correctly accurding to the expected input
                 yield return null;
             }
-            Instantiate(SlashPrefab, transform.position, Quaternion.identity);
+            Instantiate(FindSlashPrefab(inputs[i]), transform.position, Quaternion.identity);
             yield return null;
         }
         

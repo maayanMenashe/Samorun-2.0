@@ -18,8 +18,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private float combatTimeScale = 0.1f;
     [SerializeField]
-    private bool boss;
-    
+    private int numOfHits = 4;
+
     
     // private fields
     private int arrowHorizontalDirection;
@@ -29,8 +29,6 @@ public class EnemyController : MonoBehaviour
     private float deathAnimDuration = 1 / 6f;
     private float originalTimeScale;
     private float playerOriginalSpeed;
-    private int numOfHitsEnemy = 4;
-    private int numOfHitsBoss = 7;
     private int numOfPossibleInputs = 4;
     
     
@@ -87,16 +85,6 @@ public class EnemyController : MonoBehaviour
     
     KeyCode[] RandomButtonSequence()
     {
-        int numOfHits;
-        if (boss)
-        {
-            numOfHits = numOfHitsBoss;
-        }
-        else
-        {
-            numOfHits = numOfHitsEnemy;
-        }
-        
         KeyCode[] newArray = new KeyCode[numOfHits];
         
         for (int i = 0; i < numOfHits; i++)

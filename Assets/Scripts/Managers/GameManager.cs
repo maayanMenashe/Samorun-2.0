@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     private bool pausable;
 
     private float currentTimeScale = 1f;
+
+    private float originalVolume;
     
     
     
@@ -34,7 +36,8 @@ public class GameManager : MonoBehaviour
     {
         audioManager = FindAnyObjectByType<AudioManager>();
         Time.timeScale = 0f;
-        audioManager.backgroundMusic.volume = 0.1f;
+        originalVolume = audioManager.backgroundMusic.volume;
+        audioManager.backgroundMusic.volume = originalVolume/3;
     }
 
     // Update is called once per frame
@@ -54,12 +57,12 @@ public class GameManager : MonoBehaviour
         {
             currentTimeScale = Time.timeScale;
             Time.timeScale = 0f;
-            audioManager.backgroundMusic.volume = 0.1f;
+            audioManager.backgroundMusic.volume = originalVolume/3;
         }
         else
         {
             Time.timeScale = currentTimeScale;
-            audioManager.backgroundMusic.volume = 0.3f;
+            audioManager.backgroundMusic.volume = originalVolume;
         }
         
         
@@ -80,7 +83,7 @@ public class GameManager : MonoBehaviour
         pausable = true;
         mainMenu.SetActive(false);
         Time.timeScale = currentTimeScale;
-        audioManager.backgroundMusic.volume = 0.3f;
+        audioManager.backgroundMusic.volume = originalVolume;
         StartCoroutine(PlayTwoPopups(exposition, tutorial));
     }
     
@@ -94,7 +97,7 @@ public class GameManager : MonoBehaviour
         pausable = false;
         currentTimeScale = Time.timeScale;
         Time.timeScale = 0f;
-        audioManager.backgroundMusic.volume = 0.1f;
+        audioManager.backgroundMusic.volume = originalVolume/3;
         popup1.SetActive(true);
         
         while (!Input.anyKeyDown)
@@ -113,7 +116,7 @@ public class GameManager : MonoBehaviour
         
         popup2.SetActive(false);
         Time.timeScale = currentTimeScale;
-        audioManager.backgroundMusic.volume = 0.3f;
+        audioManager.backgroundMusic.volume = originalVolume;
         pausable = true;
     }
     

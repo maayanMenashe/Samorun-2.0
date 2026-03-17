@@ -182,13 +182,9 @@ public class EnemyController : MonoBehaviour
         camera.orthographicSize = shrinkedCameraSize;// zooms
         Time.timeScale = combatTimeScale;// slows time
         
-        
-        // this is an input array example, that will be replaced by a function that creates a random one
+        // makes a new random seqence of inputs
         KeyCode[] inputs = RandomButtonSequence();
-        //inputs[0] = KeyCode.LeftArrow;
-        //inputs[1] = KeyCode.RightArrow;
-        //inputs[2] = KeyCode.LeftArrow;
-        //inputs[3] = KeyCode.RightArrow;
+
 
         // loops one time for each input in the array
         for (int i = 0; i < inputs.Length; i++)

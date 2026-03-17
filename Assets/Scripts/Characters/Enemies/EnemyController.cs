@@ -203,7 +203,7 @@ public class EnemyController : MonoBehaviour
                 yield return null;
             }
             Instantiate(SlashPrefab, transform.position, Quaternion.identity);
-            //yield return null;
+            yield return null;
         }
         
         // stops both characters and plays dead anim

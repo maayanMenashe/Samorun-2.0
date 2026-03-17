@@ -207,7 +207,7 @@ public class EnemyController : MonoBehaviour
         // loops one time for each input in the array
         for (int i = 0; i < inputs.Length; i++)
         {
-            animator.SetInteger("AnimationNum", i);// sets the animation trigger
+            //animator.SetInteger("AnimationNum", i);// sets the animation trigger
             camera.orthographicSize = shrinkedCameraSize - i;//shrinks the camera more and more
             
             // checks if the right input was pressed

@@ -570,8 +570,8 @@ MonoBehaviour:
   combatTimeScale: 0.1
   numOfHits: 4
   upSlashPrefab: {fileID: 3565223538920206865, guid: d64e57410e0f5e044958194b5e5a9293, type: 3}
-  downSlashPrefab: {fileID: 0}
-  rightSlashPrefab: {fileID: 0}
+  downSlashPrefab: {fileID: 5481299544685525547, guid: c22a1c64524650541829017e48c21da0, type: 3}
+  rightSlashPrefab: {fileID: 2524899460692674676, guid: 1d10ba8446307e1479a96d73552417de, type: 3}
   leftSlashPrefab: {fileID: 5806661639426173134, guid: 418eee161e7b05f4d8b81829ecca42c9, type: 3}
 --- !u!95 &2870010852891097085
 Animator:

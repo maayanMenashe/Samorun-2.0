@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject tutorial;
     
+    [SerializeField]
+    private GameObject winScreen;
+    
     private AudioManager audioManager;
 
     private bool isPaused;
@@ -116,7 +119,14 @@ public class GameManager : MonoBehaviour
         audioManager.backgroundMusic.volume = 0.3f;
         pausable = true;
     }
-    
+
+    void Victory()
+    {
+        Time.timeScale = 0f;
+        audioManager.backgroundMusic.volume = 0.1f;
+        winScreen.SetActive(true);
+        pausable = false;
+    }
     
 }
 

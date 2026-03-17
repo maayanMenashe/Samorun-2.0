@@ -118,6 +118,11 @@ public class EnemyController : MonoBehaviour
         }
         return newArray;
     }
+
+
+    void Win()
+    {
+    }
     
     // makes arrow appear correctly
     private void FlipArrow(KeyCode input)

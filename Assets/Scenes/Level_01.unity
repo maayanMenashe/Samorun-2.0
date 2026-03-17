@@ -4322,7 +4322,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 372320376192670837, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_Radius
-      value: 14
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 693360612270732709, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 693360612270732709, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 693360612270732709, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 693360612270732709, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 693360612270732709, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 693360612270732709, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155487767959085681, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: shrinkedCameraSize
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1748572770213762069, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_Name
@@ -4348,6 +4376,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -6
       objectReference: {fileID: 0}
+    - target: {fileID: 5376362953284095803, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7622601271377298557, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_Size.x
       value: 7.23
@@ -4366,23 +4398,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7810495347759143971, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.59
+      value: 0.30000004
       objectReference: {fileID: 0}
     - target: {fileID: 7810495347759143971, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.59
+      value: 0.30000004
       objectReference: {fileID: 0}
     - target: {fileID: 7810495347759143971, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.59
+      value: 0.30000004
       objectReference: {fileID: 0}
     - target: {fileID: 7810495347759143971, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 312.06
+      value: 312.28
       objectReference: {fileID: 0}
     - target: {fileID: 7810495347759143971, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.2
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 7810495347759143971, guid: de6bd4bc09e3afb498b0671574356b55, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9241,7 +9273,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

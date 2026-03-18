@@ -24,6 +24,6 @@ public class CharacterMovementController : MonoBehaviour
             sign = 1;
         }
         Vector2 lerp2d = Vector2.Lerp(transform.position, transform.position + sign * Vector3.left, speed * Time.deltaTime);
-        transform.position = new Vector3(lerp2d.x, lerp2d.y, transform.position.z); 
+        transform.position = new Vector3(lerp2d.x, lerp2d.y, transform.position.z);
     }
 }

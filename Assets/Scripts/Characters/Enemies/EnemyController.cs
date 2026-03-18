@@ -230,7 +230,7 @@ public class EnemyController : MonoBehaviour
         horizontalArrow.SetActive(false);
         other.GetComponent<CharacterMovementController>().speed = 0;
         GetComponent<CharacterMovementController>().speed = 0;
-        animator.SetTrigger("Dead"); 
+        animator.SetTrigger("Dead");
         
         yield return new WaitForSeconds(deathAnimDuration); // waits for the death animation to end
         
